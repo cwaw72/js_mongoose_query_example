@@ -5,13 +5,15 @@ mongoose.connect(process.env.mongoDBUrl);
 
 const testModel = require('../models/test');
 
-const aggregate_random_search = async () => {
+const create_multi_documents = async () => {
   try {
-    const result = await testModel.aggregate([
-      {
-        $sample: { size: 1 }
-      }
-    ]);
+
+    const testList = [];
+    for (let i = 1; i < 10000; i += 1) {
+      testList.push(new testModel());
+    }
+
+    const result = await testModel.collection.insertMany(testList);
     console.log('result', result);
     return undefined;
   }
