@@ -10,6 +10,9 @@ Mongoose 검색 query 예제 리스트.
 
 * npm i 
 
+### index 추가 순서 ###
+ESR : equal -> sort -> range 
+
 ### 예제 리스트 ###
 
 * aggregate_random_search : 00개 랜덤한 순서로 출력
