@@ -11,7 +11,8 @@ Mongoose 검색 query 예제 리스트.
 * npm i 
 
 ### index 추가 순서 ###
-ESR : equal -> sort -> range 
+ESR : equal -> sort -> range
+group은 느릴 수 밖에 없다.
 
 ### 예제 리스트 ###
 
