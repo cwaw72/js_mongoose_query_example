@@ -1,4 +1,4 @@
-// 다수 다큐먼트 넣기 (insert 시 mongoose unique key 처리)
+// size 개수만큼 랜덤한 순서로 검색
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.mongoDBUrl);
@@ -13,7 +13,7 @@ const create_multi_documents = async () => {
       testList.push(new testModel());
     }
 
-    const result = await testModel.collection.insertMany(testList, {ordered: false});
+    const result = await testModel.collection.insertMany(testList);
     console.log('result', result);
     return undefined;
   }
